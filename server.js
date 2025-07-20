@@ -17,9 +17,14 @@ app.use(express.json());
 // RSS feed sources
 const RSS_SOURCES = [
 
+     {
+    name: 'Harvard Business Review',
+    url: 'http://feeds.harvardbusiness.org/harvardbusiness?format=xml',
+    category: 'Business Strategy'
+  },
   {
     name: 'Wall Street Journal',
-    url: 'https://feeds.a.dj.com/rss/RSSWorldNews.xml',
+    url: 'https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness',
     category: 'Financial News'
   },
   {
