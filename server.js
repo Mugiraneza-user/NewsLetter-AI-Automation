@@ -23,11 +23,6 @@ const RSS_SOURCES = [
     category: 'Business Strategy'
   },
   {
-    name: 'Wall Street Journal',
-    url: 'https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness',
-    category: 'Financial News'
-  },
-  {
     name: 'CNBC',
     url: 'https://www.cnbc.com/id/100003114/device/rss/rss.html',
     category: 'Markets & Business'
