@@ -18,28 +18,28 @@ app.use(express.json());
 const RSS_SOURCES = [
 
      {
-    name: 'Google news AI',
-    url: 'https://news.google.com/rss/search?q=AI+OR+Artificial+Intelligence&hl=en-US&gl=US&ceid=US:en',
-    category: 'AI Post'
+    name: 'Harvard Business Review',
+    url: 'http://feeds.harvardbusiness.org/harvardbusiness?format=xml',
+    category: 'Business Strategy'
   },
   {
-    name: 'TechCrunch AI',
-    url: 'https://techcrunch.com/category/artificial-intelligence/feed/',
+    name: 'CNBC',
+    url: 'https://www.cnbc.com/id/100003114/device/rss/rss.html',
     category: 'Markets & Business'
   },
   {
-    name: 'VentureBeat AI',
-    url: 'https://venturebeat.com/category/ai/feed/',
-    category: 'AI Post'
+    name: 'Financial Times',
+    url: 'https://www.ft.com/rss/home',
+    category: 'Global Finance'
   },
   {
-    name: 'ArXiv AI',
-    url: 'http://arxiv.org/rss/cs.AI',
-    category: 'AI post'
+    name: 'Bloomberg',
+    url: 'https://feeds.bloomberg.com/markets/news.rss',
+    category: 'Markets'
   }
 ];
 
-// Cache for combined feed
+// Cagit add .che for combined feed
 let cachedFeed = null;
 let lastUpdate = null;
 const CACHE_DURATION = 15 * 60 * 1000; // 15 minutes
@@ -137,7 +137,7 @@ function generateRSSXML(items) {
   <channel>
     <title>Financial News Hub - Combined Feed</title>
     <link>https://your-domain.com/rss</link>
-    <description>Combined RSS feed from Google news ,ArXiv , VentureBeat AI and TechCrunch AI</description>
+    <description>Combined RSS feed from Harvard Business Review, Wall Street Journal, CNBC, Financial Times, and Bloomberg</description>
     <language>en-us</language>
     <lastBuildDate>${now}</lastBuildDate>
     <ttl>15</ttl>
